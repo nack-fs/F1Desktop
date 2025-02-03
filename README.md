@@ -43,68 +43,101 @@ F1Desktop ha logrado obtener una **puntuación superior al 90% en Google Lightho
 
 ![](captures/Capture_1.png)  
 
+<sep>  
+
 ---  
 
 ![](captures/Capture_2.png)  
+
+<sep>  
 
 ---  
 
 ![](captures/Capture_3.png)  
 
+<sep>  
+
 ---  
 
 ![](captures/Capture_4.png)  
+
+<sep>  
 
 ---  
 
 ![](captures/Capture_5.png)  
 
+<sep>  
+
 ---  
 
 ![](captures/Capture_6.png)  
+
+<sep>  
 
 ---  
 
 ![](captures/Capture_7.png)  
 
+<sep>  
+
 ---  
 
 ![](captures/Capture_8.png)  
+
+<sep>  
 
 ---  
 
 ![](captures/Capture_9.png)  
 
+<sep>  
+
 ---  
 
 ![](captures/Capture_10.png)  
+
+<sep>  
 
 ---  
 
 ![](captures/Capture_11.png)  
 
+<sep>  
+
 ---  
 
 ![](captures/Capture_12.png)  
+
+<sep>  
 
 ---  
 
 ![](captures/Capture_13.png)  
 
+<sep>  
+
 ---  
 
 ![](captures/Capture_14.png)  
+
+<sep>  
 
 ---  
 
 ![](captures/Capture_15.png)  
 
+<sep>  
+
 ---  
 
 ![](captures/Capture_16.png)  
 
+<sep>  
+
 ---  
 
 ![](captures/Capture_17.png)  
+
  
 
