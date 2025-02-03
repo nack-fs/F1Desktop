@@ -40,3 +40,22 @@ F1Desktop no solo proporciona información, sino que también incluye **varios j
 Uno de los pilares fundamentales del proyecto ha sido garantizar una experiencia fluida en cualquier dispositivo. Para ello, se han aplicado diversas técnicas de diseño responsivo, incluyendo **media queries** y estrategias de adaptación para pantallas de diferentes tamaños.  
 
 F1Desktop ha logrado obtener una **puntuación superior al 90% en Google Lighthouse**, lo que garantiza un rendimiento eficiente, tiempos de carga reducidos y una experiencia de usuario óptima.  
+
+![](captures/Capture_1.png)  
+![](captures/Capture_2.png)  
+![](captures/Capture_3.png)  
+![](captures/Capture_4.png)  
+![](captures/Capture_5.png)  
+![](captures/Capture_6.png)  
+![](captures/Capture_7.png)  
+![](captures/Capture_8.png)  
+![](captures/Capture_9.png)  
+![](captures/Capture_10.png)  
+![](captures/Capture_11.png)  
+![](captures/Capture_12.png)  
+![](captures/Capture_13.png)  
+![](captures/Capture_14.png)  
+![](captures/Capture_15.png)  
+![](captures/Capture_16.png)  
+![](captures/Capture_17.png)  
+
