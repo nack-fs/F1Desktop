@@ -1,0 +1,324 @@
+/* //////////////////////////////////////////////////////*/
+/* Ignacio Fernández Suárez - UO294177*/
+/* //////////////////////////////////////////////////////*/
+
+/*
+    Información Cromática [Nivel AAA]
+    ------------------------------------
+    #EB0000 y white para algunos elementos h1-h6
+    #151515 y white para el resto de elementos
+*/
+
+/* Especificidad 001*/
+body {
+    font-family: 'Futura', 'Century Gothic', sans-serif;
+    background-color: white;
+    color: #151515; 
+}
+
+/* Especificidad 002*/
+body p {
+    font-size: 1.1em;
+}
+
+/* Especificidad 002*/
+body h2 {
+    font-size: 1.8em;
+}
+
+/* Especificidad 002*/
+p a {
+    font-weight: bold;
+}
+
+/* Especificidad 001*/
+header {
+    background-color: #EB0000;
+    /*Color primer plano heredado: Body-> #151515*/
+}
+
+/* Especificidad 002*/
+header h1{
+    color: white;
+    /*Color de fondo heredado: header-> #EB0000*/
+}
+
+/* Especificidad 002 */
+h1 a{
+   color: white;
+   /*Color de fondo heredado: header-> #EB0000*/
+}
+
+/* Especificidad 002*/
+header + p {
+    font-size: 0.9em;
+}
+
+/* Especificidad 001*/
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Especificidad 001*/
+a{
+    color: #151515;
+    text-decoration: none;
+    /*Color de fondo heredado: Body -> white*/
+}
+
+/* Especificidad 011*/
+a:hover{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Especificidad 001*/
+footer {
+    background-color: #151515;
+    /*Color de primer plano heredado: Body -> #151515*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Especificidad 002*/
+footer picture,
+footer img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Especificidad 001*/
+ul,ol,dl{
+    list-style-type: square;
+    font-size: 1.1em;
+    color: #151515;
+    /*Color de fondo heredado: Body-> white*/
+}
+
+/* Especificidad 003*/
+ul ul li {
+    color: #151515;
+    /*Color de fondo heredado: Body-> white*/
+}
+
+/* Especificidad 001*/
+dt{
+    font-size: 1.4em;
+    color: white;
+    background-color: #EB0000;
+    border-radius: 0.5em;
+    text-align: center;
+}
+
+/* Especificidad 001*/
+dd{
+    font-weight: lighter;
+    font-size: 1.05em;
+}
+
+/* Especificidad 001*/
+table {
+    table-layout: fixed;
+    justify-content: center;
+    align-items: center;
+    border-collapse: collapse;
+    background-color: white;
+    /*Color de primer plano heredado: Body-> #151515*/
+    box-shadow: 0 0.25em 0.625em rgba(0, 0, 0, 0.1);
+    border-radius: 0.25em;
+    overflow: hidden;
+}
+
+/* Especificidad 001*/
+th, td {
+    padding: 0.75em;
+    text-align: left;
+}
+
+/* Especificidad 001*/
+th {
+    background-color: #f2f2f2;
+    color: #151515;
+    font-weight: bold;
+}
+
+/* Especificidad 011*/
+tr:hover {
+    background-color: #EB0000;
+    font-weight: bold;
+    color: white;
+}
+
+/* Especificidad 001*/
+video {
+    width: 100%;
+    height: auto;
+}
+
+/* Especificidad 002*/
+p + section{
+    padding-bottom: 2em;
+}
+
+/* Especificidad 002*/
+h2 + section {
+    background-color: white;
+    /* Color de primer plano: body -> #151515  */
+    padding: 2em;
+}
+
+/* Especificidad 001*/
+button{
+    background-color: white;
+    color: #151515;
+    font-size: 1.3em;
+    font-weight: bold;
+    justify-content: center;
+    padding: 2vw;
+}
+
+/* ///////////// Mapa /////////////*/
+
+/* Especificidad 002*/
+main > div {
+    width:100%; 
+    height:50vw; 
+}
+
+/* ///////////// Carrusel /////////////*/
+
+/* Especificidad 002*/
+h2 + article {
+    width: 100%;
+    max-width: 100vh;
+    height: 70vh;
+    position: relative;
+    overflow: hidden; /* <===  */
+    border-radius: 1em;
+}
+
+/* Especificidad 003*/
+h2 + article h3 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.5em;
+    font-size: 2em;
+}
+
+/* Especificidad 003*/
+h2 + article img {
+    width: 100%;
+    max-width: 100vh;
+    height: 60vh;
+    position: absolute;
+    transition: all 0.5s;
+    object-fit: cover;
+    border-radius: 0.5em;
+}
+
+/* Especificidad 003*/
+h2 + article button {
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    padding: 0.5em;
+    border: none;
+    border-radius: 50%;
+    z-index: 10;
+    cursor: pointer;
+    background-color: #fff;
+    /*Color de primer-plano: Body-> #151515*/
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+
+/* Especificidad 013*/
+h2 + article button:active {
+    transform: scale(1.1);
+}
+
+/* Especificidad 013*/
+h2 + article button:nth-of-type(1) {
+    top: 50%;
+    right: 2%;
+}
+
+/* Especificidad 013*/
+h2 + article button:nth-of-type(2) {
+    top: 50%;
+    left: 2%;
+}
+
+/* ///////////// MEDIA-QUERIES /////////////*/
+
+@media (max-width: 768px) {
+    /* Especificidad 002*/
+    header + p {
+        display: none;
+    }
+
+    /* ///////////// TABLAS ADAPTABLES /////////////*/
+
+    /* Especificidad 001*/
+    body {
+        overflow-x: hidden; /* Redefinición de overflow-x*/
+    }
+    
+    /* Especificidad 001*/
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+    
+    /* Especificidad 001*/
+    th, td {
+        display: block;
+        text-align: right; /* Redefinición de text-align */
+        font-size: 1.1em;
+    }
+    
+    /* Especificidad 001*/
+    th {
+        background-color: #EB0000; /* Redefinición de background-color */
+        color: white; /* Redefinición de color */
+        font-weight: bold; /* Redefinición de font-weight */
+        text-align: left; /* Redefinición de text-align */
+    }
+    
+    /* Especificidad 001*/
+    tr {
+        margin-bottom: 1.5em;
+        display: block;
+    }
+
+    /* Especificidad 011*/
+    td:first-child {
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+    
+    /* Especificidad 001*/
+    td {
+        font-size: 1em; /* Redefinición de font-size */
+        border-top: 0.1em solid #f2f2f2;
+    }
+    
+    /* Especificidad 002*/
+    td a {
+        display: block;
+        margin-top: 0.5em;
+    }
+    
+    /* Especificidad 001*/
+    th, td {
+        padding: 1.5em 1em; /* Redefinición de padding */
+    }    
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name ="author" content ="Ignacio Fernández Suárez - UO294177" />
+    <meta name ="description" content ="Noticias" />
+    <meta name ="keywords" content ="noticias,news" />
+    <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+    <title>Noticias</title>
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css"/>
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="estilo/article_elements.css"/>
+    <link rel="icon" href="multimedia/LogotipoF1Desktop.ico">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <header>
+    <img alt="logotipo_F1Desktop" src="multimedia/Logotipo_F1_Desktop_Sized.png"/>
+    <h1> <a href="index.html">F1 Desktop</a></h1>
+    <nav>
+        <a href="calendario.html">Calendario</a>
+        <a href="circuito.html">Circuito</a>
+        <a href="juegos.html">Juegos</a>
+        <a href="meteorologia.html">Meteorología</a>
+        <a href="noticias.html" class="active">Noticias</a>
+        <a href="piloto.html">Piloto</a>
+        <a href="php/viajes.php">Viajes</a>
+    </nav>
+    </header>
+    <p>Estás en: <a href="index.html">Inicio</a> >> Noticias</p>
+    
+    <h2>Noticias</h2>
+    
+    <main>
+        <article>
+            <h3>No hay noticias cargadas todavía</h3>
+            <script src="js/noticias.js"></script>
+        </article>
+        <section>
+            <h3>Añade tus propias noticias:</h3>
+            <label for="titulo">Título:</label>
+            <input type="text" name="titulo" id="titulo">
+            
+            <label for="texto">Texto:</label>
+            <input type="text" name="texto" id="texto">
+            
+            <label for="autor">Autor:</label>
+            <input type="text" name="autor" id="autor">
+
+            <button type="button" onclick="agregarDatos()">Añadir</button>
+        </section>
+    </main>
+
+    <footer>
+        <picture>
+            <source srcset="multimedia/Footter_Partners_max465px.png" media="(max-width: 465px)">
+            <source srcset="multimedia/Footter_Partners_max799px.png" media="(max-width: 799px)">
+            <source srcset="multimedia/Footter_Partners.png">
+            <img src="multimedia/Footter_Partners.png" alt="Footer of the Partners">
+        </picture>
+    </footer>
+</body>
+</html>

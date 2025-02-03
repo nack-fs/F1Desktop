@@ -1,0 +1,100 @@
+/* //////////////////////////////////////////////////////*/
+/* Ignacio Fernández Suárez - UO294177*/
+/* //////////////////////////////////////////////////////*/
+
+/* Especificidad 001 */
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente fila */
+    justify-content: space-between; /* Espaciado uniforme entre elementos */
+    align-items: flex-start; /* Alinea los elementos al inicio de cada fila */
+    background-color: #151515;
+    padding: 1em;
+    gap: 1em; /* Espaciado entre las tarjetas */
+}
+
+/* Especificidad 002 */
+main h2 {
+    color: #FFF;
+    /*Color de segundo plano heredado: #memoria -> #151515*/
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+/* Especificidad 001 */
+article {
+    width: calc(20% - 1.5em);
+    aspect-ratio: 0.7;
+    margin: 0.5em;
+    transform: scale(1);
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    box-shadow: 0 0 0.1em rgba(0, 0, 0, .3);
+}
+
+/* Especificidad 011 */
+article[data-state="flip"] {
+    transform: rotateY(180deg);
+}
+
+/* Especificidad 012 */
+article[data-state="revealed"] h3 {
+    display: none;
+}
+
+/* Especificidad 012 */
+article[data-state="revealed"] img {
+    display: block;
+}
+
+/* Especificidad 002 */
+article h3,
+article img {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 0.5em;
+    background: #FFF;
+    /*Color de primer plano heredado: body -> #151515*/
+    backface-visibility: hidden;
+}
+
+/* Especificidad 002 */
+article h3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Especificidad 002 */
+article img {
+    transform: rotateY(180deg);
+    display: none;
+}
+
+/* Especificidad 012 */
+article[data-state="flip"] img {
+    display: block;
+}
+
+/* ///////////// MEDIA-QUERIES /////////////*/
+
+@media (max-width: 768px) {
+    /* Especificidad 001 */
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Especificidad 001 */
+    article {
+        width: 80%;
+        margin: 0.5em 0;
+    }
+}

@@ -1,0 +1,81 @@
+/* Especificidad 001 */
+main {
+    font-size: 1.4em;
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Especificidad 002 */
+main article {
+    display: flex;
+    flex-direction: column; /* Cambio aquí para apilar verticalmente los elementos */
+    padding: 2em;
+}
+
+/* Especificidad 003 */
+main article h3 {
+    order: 0; /* Asegura que el h3 se mantenga en la parte superior */
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+/* Especificidad 013 */
+main article article:first-of-type {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 1em 0.1em red;
+    border: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Especificidad 013 */
+main article article:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 1em 0.1em blue;
+    border: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Especificidad 012 */
+main article:nth-of-type(3) {
+    display: flex;
+    flex-direction: row;
+}
+
+/* ///////////// MEDIA-QUERIES /////////////*/
+
+@media (max-width: 768px) {
+    /* Especificidad 001 */
+    main {
+        font-size: 1em; /* Redefinición de font-size */
+    }
+
+    /* Especificidad 002 */
+    main article {
+        padding: 1em; /* Redefinición de padding-[bottom.top,left,right] */
+    }
+
+    /* Especificidad 003 */
+    main article h3 {
+        font-size: 1.6rem;
+        margin-bottom: 1em; /* Redefinición de margin-bottom */
+    }
+
+    /* Especificidad 003 */
+    main article article {
+        padding: 1em;
+    }
+
+    /* Especificidad 012 */
+    main article:nth-of-type(3) {
+        flex-direction: column; /* Redefinición de flex-direction */
+        align-items: center;
+        gap: 0.8rem;
+    }
+}
+

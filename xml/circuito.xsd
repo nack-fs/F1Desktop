@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://www.uniovi.es" elementFormDefault="qualified" targetNamespace="http://www.uniovi.es" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="circuitos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="1" maxOccurs="unbounded" ref="circuito" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="circuito">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="nombre" />
+                <xs:element ref="longitudGlobal" />
+                <xs:element ref="anchuraGlobal" />
+                <xs:element ref="fecha" />
+                <xs:element ref="hora" />
+                <xs:element ref="localidad" />
+                <xs:element ref="pais" />
+                <xs:element ref="vueltas" />
+                <xs:element minOccurs="3" maxOccurs="unbounded" ref="referencia" />
+                <xs:element minOccurs="1" maxOccurs="5" ref="imagen" />
+                <xs:element minOccurs="0" maxOccurs="3" ref="video" />
+                <xs:element ref="coordenada" />
+                <xs:element minOccurs="1" maxOccurs="unbounded" ref="punto" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="nombre" type="xs:string" />
+
+    <xs:element name="longitudGlobal">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:integer">
+                    <xs:attribute name="unidad" type="xs:string" default="metros" />
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="anchuraGlobal">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:integer">
+                    <xs:attribute name="unidad" type="xs:string" default="metros" />
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="fecha">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:date">
+                    <xs:attribute name="formato" type="xs:string" default="ISO-8601" />
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="hora">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="referencia" type="xs:string" use="required" />
+                    <xs:attribute name="formato" type="xs:string" use="required" />
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="localidad">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="cp" type="xs:string" use="required" />
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="pais" type="xs:string" />
+
+    <xs:element name="referencia">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="URL" type="xs:string" use="required" />
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="imagen">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="href" type="xs:string" use="required" />
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="video">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="href" type="xs:string" />
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="coordenadaType">
+        <xs:sequence>
+            <xs:element name="longitud" type="xs:double" />
+            <xs:element name="latitud" type="xs:double" />
+            <xs:element name="altitud" type="xs:double" />
+        </xs:sequence>
+        <xs:attribute name="unidad" type="xs:string" />
+    </xs:complexType>
+
+    <xs:element name="coordenada" type="coordenadaType" />
+
+    <xs:element name="punto">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="1" maxOccurs="unbounded" ref="coordenada" />
+            </xs:sequence>
+            <xs:attribute name="distancia" type="xs:double" use="required" />
+            <xs:attribute name="nSector" type="xs:string" use="required" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="vueltas" type="xs:int" />
+</xs:schema>

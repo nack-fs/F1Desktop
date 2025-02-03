@@ -1,0 +1,80 @@
+/* //////////////////////////////////////////////////////*/
+/* Ignacio Fernández Suárez - UO294177*/
+/* //////////////////////////////////////////////////////*/
+
+/* Especificidad 003 */
+h2 + main article{
+    background-color: white;
+        /* Color de primer plano: body -> #151515  */
+    display: flex;
+    flex-direction: row;
+    padding: 2vw;
+    box-shadow: 0 0 2vw rgba(0, 0, 0, 0.2);
+    border-radius: 1vw;
+}
+
+/* Especificidad 004 */
+h2 + main article > article {
+    box-shadow: none;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Especificidad 005 */
+h2 + main article > article img {
+    width: 50%;
+    margin-bottom: 1vw;
+    align-self: center;
+}
+
+/* Especificidad 004 */
+h2 + main article p {
+    margin-right: 3vw;
+}
+
+/* Especificidad 002 */
+main section {
+    margin-top: 5em;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5em;
+    gap: 2em;
+}
+
+/* Especificidad 001 */
+button{
+    color: white;
+    font-size: 1.5em;
+    border-radius: 0.5em;
+    background-color: #EB0000;
+}
+
+/* Especificidad 001 */
+main {
+    text-align: left;
+    display: block;
+}
+
+/* ///////////// MEDIA-QUERIES /////////////*/
+
+@media (max-width: 768px) {
+    /* Especificidad 003 */
+    h2 + main article{
+        flex-direction: column;
+        /* Redefinición de flex-direction */
+    }
+
+    /* Especificidad 004 */
+    h2 + main article > article {
+        flex-direction: column;
+        flex: 1;
+        /* Redefinición de flex-direction */
+    }
+
+    /* Especificidad 002 */
+    main section {
+        flex-direction: column;
+        gap: 2em;
+        /* Redefinición de gap */
+    }
+}

@@ -1,0 +1,75 @@
+/* //////////////////////////////////////////////////////*/
+/* Ignacio Fernández Suárez - UO294177*/
+/* //////////////////////////////////////////////////////*/
+
+@media (min-width: 769px) {
+    /* Especificidad 001 */
+    header {
+        display: flex; /* Redefinición de display */
+        align-items: center; /* Redefinición de align-items */
+        justify-content: space-around;
+    }
+    
+    /* Especificidad 001 */
+    nav {
+        display: flex; /* Redefinición de display */
+        color: black;
+        background-color: black; /* Redefinición de background-color */
+        border-radius: 1.5em;
+    }
+    
+    /* Especificidad 002 */
+    nav a {
+        font-size: 1.2em; /* Redefinición de font-size */
+        padding: 1.2em; /* Redefinición de padding */
+        color: white;
+    }
+    
+    /* Especificidad 012 */
+    nav a.active {
+        background-color: white; /* Redefinición de background-color */
+        border-radius: 1em;
+        font-size: 1.3em; /* Redefinición de font-size */
+        color: black; /* Redefinición de color */
+    }   
+}
+
+@media (max-width: 768px) {
+    /* Especificidad 001 */
+    header {
+        display: flex; /* Redefinición de display */
+        flex-direction: column;
+        align-items: center; /* Redefinición de align-items */
+    }
+
+    /* Especificidad 001 */
+    nav {
+        display: flex; /* Redefinición de display */
+        color: white; /* Redefinición de color */
+        flex-direction: column;
+        background-color: black; /* Redefinición de background-color */
+        border-radius: 1.5em; /* Redefinición de border-radius */
+    }
+
+    /* Especificidad 002 */
+    nav a {
+        color: white; /* Redefinición de color (Hay un color de primer plano establecido y no hay color de fondo) */
+        font-size: 0.8em; /* Redefinición de font-size */
+        padding: 0.8em; /* Redefinición de padding: padding-top, padding-right, padding-bottom, padding-left */
+        /*Color de segundo plano heredado: nav -> black*/
+    }
+
+    /* Especificidad 012 */
+    nav a.active {
+        background-color: white; /* Redefinición de background-color */
+        border-radius: 0.5em;
+        /* Redefinición de border-top-left-radius, border-top-right-radius, border-bottom-left-radius, border-bottom-right-radius */
+        font-size: 0.9em; /* Redefinición de font-size */
+        color: black; /* Redefinición de color */
+    }
+
+    /* Especificidad 001 */
+    h1 {
+        margin-bottom: 1em;
+    }
+}

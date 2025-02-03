@@ -1,0 +1,21 @@
+/* //////////////////////////////////////////////////////*/
+/* Ignacio Fernández Suárez - UO294177*/
+/* //////////////////////////////////////////////////////*/
+
+/* Especificidad 002 */
+main button{
+    background-color: #EB0000;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    justify-content: center;
+    padding: 2vw;
+    border-radius: 1vw;
+    margin: 1.3em;
+}
+
+/* Especificidad 002 */
+h2 + picture {
+    display: grid;
+    place-items: center;
+}

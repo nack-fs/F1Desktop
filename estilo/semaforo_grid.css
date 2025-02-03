@@ -1,0 +1,174 @@
+/* //////////////////////////////////////////////////////*/
+/* Ignacio Fernández Suárez - UO294177*/
+/* //////////////////////////////////////////////////////*/
+
+/* Especificidad 001 */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Redefinición de align-items */
+    justify-items: center;
+    padding-bottom: 1em;
+}
+
+/* Especificidad 002 */
+h1 + p {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Especificidad 002 */
+main article:first-of-type {
+    display: grid; /* Redefinición de grid */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 1fr;
+    gap: 1em;
+    align-items: center;
+    justify-items: center;
+    padding-bottom: 2em;
+}
+
+/* Especificidad 012 */
+article h2:first-of-type {
+    grid-column: 1 / -1;
+    grid-row: 1;
+}
+
+article div {
+    grid-column: span 1;
+    grid-row: 2;
+}
+
+/* ///////////// LUCES SEMÁFORO /////////////*/
+
+/* Especificidad 001 */
+div {
+    width: 15em;
+    min-width: 20em;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: #0007;
+    /* Color de primer plano: Body -> #151515*/
+    border: 0.25em solid #000;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+    width: 100%; /* Redefinición de width */
+}
+
+/* //////////////////////////////////*/
+
+/* Especificidad 002 */
+article + article{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    align-items: center;
+    justify-items: center;
+    border-radius: 1vw;
+}
+
+/* Especificidad 011 */
+button:enabled {
+    background-color: white;
+    color: #151515;
+}
+
+/* Especificidad 011 */
+button:disabled {
+    background-color: #151515;
+    color: white;
+}
+
+/* Especificidad 013 */
+article + article button:first-child {
+    grid-column: 2;
+}
+
+/* Especificidad 013 */
+article + article button:last-child {
+    grid-column: 3;
+}
+
+/* Especificidad 002 */
+main form{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+    padding-bottom: 2em;
+}
+
+@keyframes lightUp {
+    0% {
+        background-color: #0007;
+        /*Redefinición de background-color */
+        /* Color de primer plano: Body -> #151515*/
+    }
+    100% {
+        background-color: #f00;
+        /*Redefinición de background-color */
+        /* Color de primer plano: Body -> #151515*/
+    }
+}
+
+@keyframes lightOut {
+    0% {
+        background-color: #f00; 
+        /*Redefinición de background-color */
+        /* Color de primer plano: Body -> #151515*/
+    }
+    100% {
+        background-color: #0007;
+        /*Redefinición de background-color */
+        /* Color de primer plano: Body -> #151515*/
+    }
+}
+
+/* Especificidad 011 */
+div.activo {
+    animation: lightUp 0.5s forwards;
+}
+
+/* Especificidad 011 */
+div.inactivo {
+    animation: lightOut 0.1s forwards;
+}
+
+/* ///////////// MEDIA-QUERIES /////////////*/
+
+@media (max-width: 768px) {
+    
+    /* Especificidad 012 */
+    main article:first-of-type {
+        display: flex; /* Redefinición de display */
+        flex-direction: column;
+        align-items: center; /* Redefinición de align-items */
+        justify-content: center;
+        gap: 1em; /* Redefinición de gap */
+    }
+
+    /* Especificidad 012 */
+    article h2:first-of-type {
+        order: 1;
+    }
+
+    /* Especificidad 002 */
+    article div {
+        order: 2; 
+        width: 100%; /* Redefinición de width */
+        max-width: 12em; 
+    }
+
+    /* Especificidad 001 */
+    div {
+        width: 100%;
+        max-width: 12em;
+        border-radius: 50%; /* Redefinición de border */
+    }
+
+    /* Especificidad 001 */
+    h1 {
+        font-size: 1em;
+        text-align: center;
+    }
+}
+
