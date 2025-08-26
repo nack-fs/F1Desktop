@@ -1,45 +1,51 @@
-<h1>🏎️ F1Desktop - Página Web sobre Fórmula 1</h1>  
+<h1> 🏎️ F1Desktop - A Website About Formula 1 </h1>
 
-F1Desktop es un proyecto web desarrollado durante el curso **2024** para la asignatura **Sistemas y Estándares para la Web**. Se trata de una página web dedicada a la **Fórmula 1**, que no solo ofrece información actualizada sobre el campeonato, sino que también incorpora diversas funcionalidades interactivas y juegos, brindando una experiencia inmersiva para los aficionados del automovilismo.  
+F1Desktop is a web project developed during the **2024** academic year for the **Systems and Standards for the Web** course. It's a website dedicated to **Formula 1**, offering not only up-to-date championship information but also a variety of interactive features and games, providing an immersive experience for motorsport fans.
 
-Este proyecto ha sido desarrollado con un enfoque en la optimización, la accesibilidad y las buenas prácticas de desarrollo web, obteniendo una puntuación superior al **90% en Google Lighthouse**.  
+This project was developed with a focus on optimization, accessibility, and web development best practices, achieving a score of over **90% on Google Lighthouse**.
 
-## 🌐 Tecnologías Utilizadas  
+---
 
-Para el desarrollo de F1Desktop, se ha empleado una combinación de tecnologías que garantizan un rendimiento eficiente y una experiencia de usuario fluida:  
+## 🌐 Technologies Used
 
-### 🔹 **Frontend: HTML y CSS Puro**  
-El diseño de la página se ha construido utilizando **HTML y CSS puro**, siguiendo estándares web modernos y evitando el uso de elementos como `div` y selectores `id` en el CSS. Esto permite un código más estructurado, semántico y fácil de mantener.  
+For the development of F1Desktop, a combination of technologies was used to ensure efficient performance and a smooth user experience:
 
-### 🔹 **Computación en el Cliente y Servidor**  
-El proyecto incorpora una combinación equilibrada de tecnologías de programación:  
-- **JavaScript**: Responsable de aproximadamente la mitad de la lógica computacional en el cliente.  
-- **PHP**: Se ha utilizado para gestionar la otra mitad de la lógica, permitiendo la integración con el servidor y bases de datos.  
+### Frontend: Pure HTML and CSS
+The page's design was built using **pure HTML and CSS**, following modern web standards and avoiding the use of elements like `div` and `id` selectors in the CSS. This results in more structured, semantic, and easy-to-maintain code.
 
-### 🔹 **Integración de APIs**  
-Se han implementado diversas APIs tanto en **JavaScript** como en **PHP** para ofrecer una experiencia dinámica e interactiva:  
-- 🌦️ **Meteorología en tiempo real**: Consulta y visualización de datos climáticos actualizados.  
-- 🗺️ **Mapas dinámicos y estáticos**: Representación gráfica de circuitos y ubicaciones relevantes.  
-- 🎠 **Carrusel de imágenes**: Galería interactiva con imágenes de la Fórmula 1.  
-- 🏁 **Datos actualizados de la F1**: Obtención de información en tiempo real sobre el campeonato.  
+### Client-Side and Server-Side Computing
+The project incorporates a balanced mix of programming technologies:
+* **JavaScript**: Responsible for approximately half of the client-side computational logic.
+* **PHP**: Used to manage the other half of the logic, allowing for integration with the server and databases.
 
-### 🔹 **Base de Datos con MariaDB**  
-Para la gestión de datos, especialmente en los juegos interactivos, se ha empleado **MariaDB**, asegurando una estructura eficiente para el almacenamiento y recuperación de información.  
+### API Integration
+Various APIs have been implemented in both **JavaScript** and **PHP** to provide a dynamic and interactive experience:
+* 🌦️ **Real-time Meteorology**: Consultation and display of up-to-date weather data.
+* 🗺️ **Dynamic and Static Maps**: Graphical representation of circuits and relevant locations.
+* 🎠 **Image Carousel**: An interactive gallery with Formula 1 images.
+* 🏁 **Up-to-date F1 Data**: Real-time information about the championship.
 
-## 🎮 Juegos Interactivos  
+### MariaDB Database
+For data management, especially in the interactive games, **MariaDB** was used, ensuring an efficient structure for storing and retrieving information.
 
-F1Desktop no solo proporciona información, sino que también incluye **varios juegos interactivos** diseñados para mejorar la experiencia del usuario:  
+---
 
-1. **🃏 Memoria de Cartas de F1**: Un juego clásico donde el usuario debe encontrar las parejas de cartas relacionadas con la Fórmula 1.  
-2. **🚦 Semáforo de Reacción**: Prueba de reflejos donde el usuario debe reaccionar al cambio de luces del semáforo, simulando la salida de una carrera.  
-3. **❓ ¿Qué Prefieres?**: Juego de preguntas en el que el usuario elige entre distintas opciones relacionadas con la F1.  
-4. **🏎️ Visor 3D de un Coche de F1**: Visualización en **tiempo real** de un monoplaza de Fórmula 1, permitiendo explorar sus detalles a través de un modelo 3D interactivo.  
+## 🎮 Interactive Games
 
-## 📱 Adaptabilidad y Optimización  
+F1Desktop doesn't just provide information; it also includes **several interactive games** designed to enhance the user experience:
 
-Uno de los pilares fundamentales del proyecto ha sido garantizar una experiencia fluida en cualquier dispositivo. Para ello, se han aplicado diversas técnicas de diseño responsivo, incluyendo **media queries** y estrategias de adaptación para pantallas de diferentes tamaños.  
+1.  **🃏 F1 Card Memory**: A classic game where the user must find matching pairs of Formula 1-related cards.
+2.  **🚦 Reaction Traffic Light**: A reflex test where the user must react to the changing lights of the traffic signal, simulating a race start.
+3.  **❓ What Would You Rather?**: A question game where the user chooses between different F1-related options.
+4.  **🏎️ 3D F1 Car Viewer**: A **real-time** visualization of a Formula 1 car, allowing users to explore its details through an interactive 3D model.
 
-F1Desktop ha logrado obtener una **puntuación superior al 90% en Google Lighthouse**, lo que garantiza un rendimiento eficiente, tiempos de carga reducidos y una experiencia de usuario óptima.  
+---
+
+## 📱 Adaptability and Optimization
+
+One of the fundamental pillars of the project was to ensure a seamless experience on any device. To achieve this, various responsive design techniques were applied, including **media queries** and adaptation strategies for different screen sizes.
+
+F1Desktop has achieved a score of over **90% on Google Lighthouse**, which guarantees efficient performance, reduced loading times, and an optimal user experience. 
 
 ![](captures/Capture_1.png)  
 
